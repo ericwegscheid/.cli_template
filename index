@@ -55,7 +55,7 @@ _UTILNAME_cli_complete() {
   local commands=($(echo $_UTILNAME_cli_commands | awk '/.+/ {print $2}'))
   local completions="$(echo $commands)"
   completions="$completions$(echo 'ADDITIONAL_AUTOCOMPLETE_HERE')"
-  reply=( $(compgen -W ${completions[@] -- $1}) )
+  reply=( $(compgen -W ${completions[@]} -- $1) )
 }
 
 compctl -f -K _UTILNAME_cli_complete UTILNAME
