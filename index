@@ -7,21 +7,15 @@ _UTILNAME_cli_commands="
 
 # display help
 _UTILNAME_cli_help() {
-  echo "ADD TITLE FOR UTILNAME AND DESCRIPTION"
-  echo
-  echo "Syntax: UTILNAME <command> <<arg>...>"
-  echo
-  echo "Commands:"
-  echo 
-  echo "..."
-}
+cat <<EOF
+ADD TITLE FOR UTILNAME AND DESCRIPTION
 
-_timestamp() {
-  date +'%Y%m%d%k%M%S'
-}
+Syntax: UTILNAME <command> <<arg>...>
 
-_has_logs() {
-  [[ -s ~/.track/logs ]];
+Commands:
+...
+
+EOF
 }
 
 UTILNAME() {
